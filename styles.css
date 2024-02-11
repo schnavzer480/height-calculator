@@ -1,0 +1,37 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 65.2%;
+}
+
+nav, header, main, footer, section {
+    display: block;
+}
+
+.bgimg {
+    height: 100%;
+    width: 100%;
+    background-image: url("bgimg.webp");
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    height: 90vh;
+
+    border: 2px solid red;
+}
+
+footer {
+    height: 10vh;
+    
+    border: 2px solid blue;
+}
