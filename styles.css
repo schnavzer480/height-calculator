@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 * {
     margin: 0;
@@ -8,6 +8,9 @@
 
 :root {
     font-size: 65.2%;
+    font-family: 'Playfair Display', serif;
+    --black: rgba(11, 10, 10, 0.496);
+    --red: rgba(234, 48, 48, 0.818);
 }
 
 nav, header, main, footer, section {
@@ -26,12 +29,33 @@ nav, header, main, footer, section {
 
 main {
     height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-    border: 2px solid red;
+.box {
+    width: 300px;
+    height: auto;
+    background-color: blue;
+    color:aliceblue;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0 1rem 0;
 }
 
 footer {
     height: 10vh;
-    
-    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: var(--black);
+    color: var(--red);
 }
