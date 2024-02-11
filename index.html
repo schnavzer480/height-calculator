@@ -19,7 +19,41 @@
         <title>Calculate your height as you have never calculate your height before!!!!!!1!1!1!SHIFT</title>
     </head>
 <body class="bgimg">
-    <main></main>
-    <footer></footer>
+    <main>
+        <div class="box" id="heightBox">
+            <label for="heightInput">Enter your height (cm):</label>
+            <input type="text" id="heightInput">
+            <button onclick="updateHeight()">Calculate</button>
+            <p id="heightText" style="display: none;"></p>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 SchnavzerSvpremacy</p>
+    </footer>
+    <script>
+        var heightInput = document.getElementById("heightInput");
+        var heightText = document.getElementById("heightText");
+    
+        heightInput.addEventListener("input", function() {
+            // Remove non-digit characters from input value
+            this.value = this.value.replace(/\D/g, '');
+    
+            // Limit input length to 3 characters
+            if (this.value.length > 3) {
+                this.value = this.value.slice(0, 3);
+            }
+        });
+    
+        function updateHeight() {
+            var value = heightInput.value.trim();
+            if (value !== "" && /^\d{1,3}$/.test(value)) {
+                heightText.textContent = "You are " + value + " cm";
+                heightText.style.display = "block";
+            } else {
+                heightText.textContent = "";
+                heightText.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
